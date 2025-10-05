@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скачать файл</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+    .download-btn {
+      background-color: #4f46e5;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .download-btn:hover {
+      background-color: #4338ca;
+    }
+    p {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <p>Download:</p>
+  <a class="download-btn" href="https://drive.google.com/uc?export=download&id=10yEPWbvQla55crWSYFiCl84-ggrUxioW" download>
+    ?? Download
+  </a>
+
+  <!-- Автозагрузка при заходе на страницу (по желанию) -->
+  <script>
+    window.onload = function() {
+      const link = document.createElement('a');
+      link.href = "https://drive.google.com/uc?export=download&id=10yEPWbvQla55crWSYFiCl84-ggrUxioW";
+      link.download = "";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
+
+</body>
+</html>
